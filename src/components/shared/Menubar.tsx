@@ -24,12 +24,14 @@ export const Menubar = ({ sort, setSort }: MenubarProps) => {
   };
   return (
     <div className="flex justify-between gap-2 p-2">
-      <ButtonGroup>
-        <Input placeholder="⚠️Under Maintenance⚠️" disabled />
-        <Button variant="outline" aria-label="Search" disabled>
-          <SearchIcon />
-        </Button>
-      </ButtonGroup>
+      <div className="flex items-center">
+        <ButtonGroup>
+          <Input placeholder="⚠️Under Maintenance⚠️" disabled />
+          <Button variant="outline" aria-label="Search" disabled>
+            <SearchIcon />
+          </Button>
+        </ButtonGroup>
+      </div>
       <div className="flex justify-between gap-2 p-2">
         <Button variant={"secondary"} onClick={handleSort}>
           {sort === "asc" ? <CalendarArrowUpIcon /> : <CalendarArrowDownIcon />}

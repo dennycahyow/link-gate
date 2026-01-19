@@ -81,13 +81,16 @@ export const LinkCard = (props: LinkCardProps) => {
         <div className="flex flex-col space-y-0.5">
           <h1 className="text-justify text-xl font-bold">{props.title}</h1>
           <p className="text-muted-foreground text-sm italic">
-            {props.updatedAt.toLocaleDateString("id-ID", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
+            {props.updatedAt
+              .toLocaleDateString("id-ID", {
+                year: "numeric",
+                month: "long",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                hourCycle: "h23",
+              })
+              .replace(".", ":")}
           </p>
         </div>
         <DropdownMenu modal={false}>
