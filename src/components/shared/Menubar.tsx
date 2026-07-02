@@ -26,7 +26,7 @@ export const Menubar = ({ sort, setSort }: MenubarProps) => {
     <div className="flex justify-between gap-2 p-2">
       <div className="flex items-center">
         <ButtonGroup>
-          <Input placeholder="⚠️Under Maintenance⚠️" disabled />
+          <Input placeholder="⚠️Under Maintenance :(⚠️" disabled />
           <Button variant="outline" aria-label="Search" disabled>
             <SearchIcon />
           </Button>
